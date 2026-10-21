@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 760">
+  <!-- Placeholder hero screen. Replace with your own screenshot, GIF, or swap the <img> for a looping <video>. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B7A66"/><stop offset="1" stop-color="#0a3d34"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="760" fill="#0F1A1F"/>
+  <rect x="24" y="70" width="180" height="22" rx="6" fill="#E8F2EF" opacity=".9"/>
+  <rect x="24" y="104" width="120" height="12" rx="6" fill="#E8F2EF" opacity=".35"/>
+  <rect x="24" y="140" width="312" height="300" rx="22" fill="url(#g)"/>
+  <rect x="104" y="230" width="152" height="120" rx="14" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="18 10" opacity=".8"/>
+  <text x="180" y="410" fill="#fff" font-family="monospace" font-size="16" text-anchor="middle" opacity=".9">HERO IMAGE PLACEHOLDER</text>
+  <rect x="24" y="464" width="148" height="64" rx="14" fill="#E8F2EF" opacity=".08"/>
+  <rect x="188" y="464" width="148" height="64" rx="14" fill="#E8F2EF" opacity=".08"/>
+  <rect x="40" y="484" width="80" height="10" rx="5" fill="#3FC7A8"/>
+  <rect x="204" y="484" width="60" height="10" rx="5" fill="#F0A63A"/>
+  <rect x="40" y="504" width="110" height="8" rx="4" fill="#E8F2EF" opacity=".3"/>
+  <rect x="204" y="504" width="100" height="8" rx="4" fill="#E8F2EF" opacity=".3"/>
+  <rect x="24" y="552" width="312" height="14" rx="7" fill="#E8F2EF" opacity=".2"/>
+  <rect x="24" y="580" width="240" height="14" rx="7" fill="#E8F2EF" opacity=".2"/>
+  <rect x="24" y="608" width="280" height="14" rx="7" fill="#E8F2EF" opacity=".2"/>
+  <rect x="24" y="672" width="312" height="52" rx="16" fill="#3FC7A8"/>
+  <text x="180" y="704" fill="#0F1A1F" font-family="sans-serif" font-weight="700" font-size="16" text-anchor="middle">Scan shelf</text>
+</svg>
