@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section id="about">
       <SectionHead eyebrow="About" title="What I'm good at">
-        I care about apps that open instantly, work without a signal, and feel at home on the platform. Skills grouped by what they let me ship.
+        I care about apps that open instantly, work without a signal, and feel at home on the platform. One codebase, two platforms, no compromises on feel. Skills grouped by what they let me ship.
       </SectionHead>
       <motion.div
         className="principles"
