@@ -1,11 +1,11 @@
 import { motion, useScroll, useSpring } from "framer-motion";
-import Nav from "./components/Nav.jsx";
-import Hero from "./components/Hero.jsx";
-import Metrics from "./components/Metrics.jsx";
-import Projects from "./components/Projects.jsx";
-import About from "./components/About.jsx";
-import Experience from "./components/Experience.jsx";
-import Contact from "./components/Contact.jsx";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Metrics from "./components/Metrics";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 
 export default function App() {
   const { scrollYProgress } = useScroll();

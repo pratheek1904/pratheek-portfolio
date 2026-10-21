@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import { skills } from "../data.js";
-import { SectionHead } from "./Reveal.jsx";
+import { motion, type Variants } from "framer-motion";
+import { skills } from "../data";
+import { SectionHead } from "./Reveal";
 
-const grid = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
-const cell = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
+const grid: Variants = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
+const cell: Variants = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 export default function About() {
   return (

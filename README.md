@@ -1,6 +1,6 @@
 # Pratheek · portfolio
 
-React + Vite + Framer Motion build of the "Release notes" design.
+React + TypeScript + Vite + Framer Motion build of the "Release notes" design.
 
 ## Run it
 
@@ -9,14 +9,14 @@ Needs Node.js 20.19+ (or 22.12+).
 ```bash
 npm install
 npm run dev      # http://localhost:5173
-npm run build    # production build in dist/
+npm run build    # type-check + production build in dist/
 npm run preview  # serve the build locally
 ```
 
 ## Make it yours
 
-- **All text, projects, metrics, skills, experience:** `src/data.js`
-- **Hero image:** drop your screenshot in `public/` and set `heroImage` in `src/data.js`,
+- **All text, projects, metrics, skills, experience:** `src/data.ts`
+- **Hero image:** drop your screenshot in `public/` and set `heroImage` in `src/data.ts`,
   or set `heroVideo` to an `.mp4`/`.webm` for a looping screen recording.
 - **Colors and fonts:** CSS variables at the top of `src/styles.css` (light + dark).
 

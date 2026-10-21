@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { profile } from "../data.js";
-import Reveal from "./Reveal.jsx";
+import { profile } from "../data";
+import Reveal from "./Reveal";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);

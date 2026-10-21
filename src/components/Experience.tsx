@@ -1,10 +1,10 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { experience } from "../data.js";
-import Reveal, { SectionHead } from "./Reveal.jsx";
+import { experience } from "../data";
+import Reveal, { SectionHead } from "./Reveal";
 
 export default function Experience() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 80%", "end 60%"] });
 
   return (

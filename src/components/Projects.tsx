@@ -1,16 +1,23 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { projects } from "../data.js";
-import { SectionHead } from "./Reveal.jsx";
+import { useState, type CSSProperties } from "react";
+import { projects, type Platform, type Project } from "../data";
+import { SectionHead } from "./Reveal";
 
-const filters = ["All", "iOS", "Android"];
+type Filter = "All" | Platform;
 
-function ProjectCard({ p, index }) {
+const filters: Filter[] = ["All", "iOS", "Android"];
+
+interface ProjectCardProps {
+  p: Project;
+  index: number;
+}
+
+function ProjectCard({ p, index }: ProjectCardProps) {
   return (
     <motion.article
       layout
       className="pcard"
-      style={{ "--card-accent": p.color }}
+      style={{ "--card-accent": p.color } as CSSProperties}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
@@ -48,7 +55,7 @@ function ProjectCard({ p, index }) {
 }
 
 export default function Projects() {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState<Filter>("All");
   const shown = projects.filter((p) => filter === "All" || p.platforms.includes(filter));
 
   return (

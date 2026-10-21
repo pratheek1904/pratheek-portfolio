@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { profile } from "../data.js";
+import { profile } from "../data";
 
-const links = [
+const links: [label: string, href: string][] = [
   ["Work", "#work"],
   ["About", "#about"],
   ["Experience", "#experience"],
   ["Contact", "#contact"],
 ];
 
-function useTheme() {
-  const [theme, setTheme] = useState(() => {
+type Theme = "light" | "dark";
+
+function useTheme(): [isDark: boolean, toggle: () => void] {
+  const [theme, setTheme] = useState<Theme | null>(() => {
     try {
-      return localStorage.getItem("theme");
+      return localStorage.getItem("theme") as Theme | null;
     } catch {
       return null;
     }

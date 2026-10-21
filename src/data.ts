@@ -1,6 +1,58 @@
 // All copy and dummy content lives here. Replace with your real details.
 
-export const profile = {
+export interface Link {
+  label: string;
+  href: string;
+}
+
+export interface Profile {
+  name: string;
+  role: string;
+  headline: string;
+  intro: string;
+  stacks: string[];
+  available: boolean;
+  email: string;
+  links: { github: string; linkedin: string; cv: string };
+  heroImage: string;
+  heroVideo: string | null;
+  heroApp: { name: string; caption: string; stats: string[] };
+}
+
+export interface Metric {
+  value: number;
+  suffix: string;
+  label: string;
+  decimals?: number;
+}
+
+export type Platform = "iOS" | "Android";
+
+export interface Project {
+  name: string;
+  version: string;
+  platforms: Platform[];
+  stack: string[];
+  summary: string;
+  highlight: string;
+  links: Link[];
+  deep: Link;
+  color: string;
+}
+
+export interface SkillGroup {
+  area: string;
+  items: string[];
+}
+
+export interface Role {
+  company: string;
+  role: string;
+  dates: string;
+  outcome: string;
+}
+
+export const profile: Profile = {
   name: "Pratheek",
   role: "Mobile developer",
   headline: "I build mobile apps people keep on their home screen.",
@@ -20,14 +72,14 @@ export const profile = {
   heroApp: { name: "ShelfScan", caption: "scan → match → sync", stats: ["0.9s cold start", "12 MB"] },
 };
 
-export const metrics = [
+export const metrics: Metric[] = [
   { value: 6, suffix: "", label: "apps shipped" },
   { value: 120, suffix: "k+", label: "total installs" },
   { value: 4.7, suffix: "★", label: "avg store rating", decimals: 1 },
   { value: 99.6, suffix: "%", label: "crash-free users", decimals: 1 },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     name: "ShelfScan",
     version: "v3.2.0",
@@ -84,14 +136,14 @@ export const projects = [
   },
 ];
 
-export const skills = [
+export const skills: SkillGroup[] = [
   { area: "UI", items: ["Jetpack Compose", "SwiftUI", "Flutter widgets", "Custom animations"] },
   { area: "State & architecture", items: ["MVVM", "Clean Architecture", "Riverpod / Bloc", "Multi-module"] },
   { area: "Offline & sync", items: ["Room / Drift / Core Data", "Background work", "Conflict resolution"] },
   { area: "Ship & measure", items: ["Fastlane", "GitHub Actions", "Crashlytics", "Baseline Profiles"] },
 ];
 
-export const experience = [
+export const experience: Role[] = [
   {
     company: "The Retail Insights",
     role: "Mobile Developer",

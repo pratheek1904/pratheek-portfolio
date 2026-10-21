@@ -1,8 +1,18 @@
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
+
+interface RevealProps {
+  children: ReactNode;
+  delay?: number;
+  y?: number;
+  className?: string;
+  id?: string;
+  as?: "div" | "section";
+}
 
 // Fades and lifts children in the first time they scroll into view.
-export default function Reveal({ children, delay = 0, y = 24, className, as = "div", ...rest }) {
-  const Tag = motion[as];
+export default function Reveal({ children, delay = 0, y = 24, className, as = "div", ...rest }: RevealProps) {
+  const Tag = as === "section" ? motion.section : motion.div;
   return (
     <Tag
       {...rest}
@@ -17,7 +27,13 @@ export default function Reveal({ children, delay = 0, y = 24, className, as = "d
   );
 }
 
-export function SectionHead({ eyebrow, title, children }) {
+interface SectionHeadProps {
+  eyebrow: string;
+  title: string;
+  children?: ReactNode;
+}
+
+export function SectionHead({ eyebrow, title, children }: SectionHeadProps) {
   return (
     <Reveal className="sec-head">
       <span className="eyebrow">{eyebrow}</span>

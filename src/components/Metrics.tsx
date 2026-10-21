@@ -1,9 +1,14 @@
 import { animate, motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { metrics } from "../data.js";
+import { metrics } from "../data";
 
-function CountUp({ value, decimals = 0 }) {
-  const ref = useRef(null);
+interface CountUpProps {
+  value: number;
+  decimals?: number;
+}
+
+function CountUp({ value, decimals = 0 }: CountUpProps) {
+  const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const [display, setDisplay] = useState((0).toFixed(decimals));
 
